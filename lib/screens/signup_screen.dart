@@ -28,47 +28,41 @@ class _SignupScreenState extends State<SignupScreen> {
   Widget build(BuildContext context) {
     // komponen kecil buat label + tanda *
     Widget requiredLabel(String text) => Row(
-          children: [
-            Text(
-              text,
-              style: const TextStyle(fontSize: 13),
-            ),
-            const Text(
-              '*',
-              style: TextStyle(color: Colors.red, fontSize: 13),
-            ),
-          ],
-        );
+      children: [
+        Text(text, style: const TextStyle(fontSize: 13)),
+        const Text('*', style: TextStyle(color: Colors.red, fontSize: 13)),
+      ],
+    );
 
     // tombol biru dengan gradient (UI-only)
     Widget primaryButton(String label, VoidCallback onTap) => GestureDetector(
-          onTap: onTap,
-          child: Container(
-            width: double.infinity,
-            height: 46,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(28),
-              gradient: const LinearGradient(
-                colors: [Color(0xFF1E88FF), Color(0xFF2D70FF)],
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFF1E88FF).withOpacity(0.25),
-                  blurRadius: 10,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Text(
-              label,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        height: 46,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(28),
+          gradient: const LinearGradient(
+            colors: [Color(0xFF1E88FF), Color(0xFF2D70FF)],
           ),
-        );
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF1E88FF).withOpacity(0.25),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Text(
+          label,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+    );
 
     return Scaffold(
       body: SafeArea(
@@ -88,10 +82,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 const Text(
                   'Sign Up Now and Unlock the Power of Justduit',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 const SizedBox(height: 20),
 
