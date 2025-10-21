@@ -1,0 +1,1 @@
+// sengaja kak dikasih komen, ikutin mola teori harus ngasih komen
